@@ -12,4 +12,10 @@ def add(number):
     if number == " ":
         return 0
     else:
-        return 1
+        numbers = number.split(",")
+        nums_len = len(numbers)
+        if nums_len <= 1:
+            return int(numbers[0])
+    
+        ans = int(numbers[0]) + int(numbers[1])
+        return ans
