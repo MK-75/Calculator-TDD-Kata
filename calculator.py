@@ -16,6 +16,11 @@ def add(number):
         nums_len = len(numbers)
         if nums_len <= 1:
             return int(numbers[0])
-    
-        ans = int(numbers[0]) + int(numbers[1])
+        ans = 0
+        if nums_len == 2:
+            ans = int(numbers[0]) + int(numbers[1])
+        elif nums_len == 3:
+            ans = int(numbers[0]) + int(numbers[1]) + int(numbers[2])
+        elif nums_len == 4:
+            ans = int(numbers[0]) + int(numbers[1]) + int(numbers[2]) + int(numbers[3])
         return ans

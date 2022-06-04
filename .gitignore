@@ -1,0 +1,8 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+
+# cache files
+.pytest_cache
+
+# coverage files
+.coverage
