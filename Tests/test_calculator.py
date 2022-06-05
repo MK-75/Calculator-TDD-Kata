@@ -37,6 +37,15 @@ def test_add_numbers():
     result = add("15, 20, 25, 30, 35")
     assert result == 125
 
+    result = add("1\n2,3")
+    assert result == 6
+
+    result = add("20\n30\n40,50")
+    assert result == 140
+
+    result = add("15\n20\n25")
+    assert result == 60
+
 # Test for errors than can occur while addition
 def test_add_errors():
     error_msg = add("1,")
@@ -47,3 +56,12 @@ def test_add_errors():
 
     error_msg = add("1|2|3")
     assert error_msg == "Input is not correct"
+
+    error_msg = add("1,\n")
+    error_msg == "Input is not correct"
+
+    error_msg = add("\n1\n3")
+    error_msg == "Input is not correct"
+
+    error_msg = add(",\n")
+    error_msg == "Input is not correct"
