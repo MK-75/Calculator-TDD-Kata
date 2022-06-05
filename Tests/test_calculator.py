@@ -46,6 +46,20 @@ def test_add_numbers():
     result = add("15\n20\n25")
     assert result == 60
 
+# Test for addition of numbers with different delimiters
+def test_add_delimiter():
+    result = add("//;\n1;2;3")
+    assert result == 6
+
+    result = add("//-\n1-2-3")
+    assert result == 6
+
+    result = add("//|\n10|20|30")
+    assert result == 60
+
+    result = add("//-\n10-20-30")
+    assert result == 60
+
 # Test for errors than can occur while addition
 def test_add_errors():
     error_msg = add("1,")
@@ -64,4 +78,10 @@ def test_add_errors():
     error_msg == "Input is not correct"
 
     error_msg = add(",\n")
+    error_msg == "Input is not correct"
+
+    error_msg = add("//-\n1-2,3")
+    error_msg == "Input is not correct"
+
+    error_msg = add("//")
     error_msg == "Input is not correct"
