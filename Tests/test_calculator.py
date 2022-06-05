@@ -85,3 +85,7 @@ def test_add_errors():
 
     error_msg = add("//")
     error_msg == "Input is not correct"
+
+# Test for errors when negative number comes
+def test_add_negative_numbers():
+    result = add("//;\n-1;-2;3")
